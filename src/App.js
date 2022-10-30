@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import Banner from './components/Banner';
+import Search from './components/Search';
+import DataGrid from './components/DataGrid';
+import SpacexContextProvider from './contexts/SpacexContext';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <Banner />
+      <SpacexContextProvider>
+        <Search />
+        <DataGrid />
+      </SpacexContextProvider>
+    </section>
   );
 }
 
