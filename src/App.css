@@ -188,3 +188,116 @@ header {
   padding: 0.5rem;
   border-radius: 25px;
 }
+
+/* DATAGRID COMPONENT */
+.datagrid__component {
+  padding-inline: 1rem;
+}
+
+/* CAPSULE */
+.capsule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.capsule:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1) translateY(-0.5rem);
+  background-color: black;
+  color: white;
+}
+
+.capsule:hover .capsule__status span {
+  background-color: white;
+  color: black;
+}
+
+.capsule__content {
+  display: flex;
+  flex: 90%;
+  align-items: center;
+}
+
+.capsule__serial {
+  flex: 40%;
+}
+
+.capsule__serial h2 {
+  font-weight: 700;
+}
+
+.capsule__serial span {
+  font-size: 0.75rem;
+  color: #a3a2a2;
+  font-weight: 600;
+}
+
+.capsule__details {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 60%;
+}
+
+.capsule__status {
+  flex: 10%;
+  text-align: center;
+}
+
+.capsule__status span {
+  background-color: black;
+  padding-inline: 0.5rem;
+  padding-block: 0.2rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+}
+
+/* PAGINATION SECTION */
+.pagination__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: 700;
+  margin-block: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+}
+
+.pagination__section div {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.pagination__section div:hover {
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.pagination__section div.active {
+  background-color: white;
+  color: black;
+  pointer-events: none;
+}
+
+.pagination__section div.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
