@@ -1,0 +1,89 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  z-index: 1;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-end;
+}
+
+.logo__container img {
+  width: 240px;
+}
+
+.menu__links {
+  display: flex;
+  gap: 2rem;
+  color: white;
+  font-size: 12px;
+}
+
+.mobile__menu__links {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background-color: black;
+  padding-inline: 3rem;
+  text-align: right;
+  padding-block: 3rem;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+.show__mobile__menu {
+  transform: translateX(0);
+}
+
+.mobile__menu__links span {
+  font-size: 12px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.6s;
+}
+
+.mobile__menu__links span:hover {
+  color: #aaa;
+}
+
+.hamburger__menu {
+  width: 22px;
+  height: 20px;
+  display: none;
+  z-index: 2;
+}
+
+.hamburger__top,
+.hamburger__middle,
+.hamburger__bottom {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 4px;
+  transition: all 0.5s;
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger__middle {
+  display: none;
+}
+
+.open .hamburger__top {
+  transform: rotate(45deg) translateX(4px);
+}
+
+.open .hamburger__bottom {
+  transform: rotate(-45deg) translateX(4px);
+}
