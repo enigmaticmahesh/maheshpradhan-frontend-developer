@@ -41,7 +41,7 @@ export default function Search() {
       <div className="filters">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search Capsules..."
           className="search__input"
           value={searchField}
           onChange={(e) => setSearchField(e.target.value)}
